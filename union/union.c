@@ -43,9 +43,19 @@ int main(int ac, char **av)
 	}
 	while (s1[i])
 	{
-		if (ft_isin(s1[i], s2) && !ft_isin(s1[i], buf))
+		if (!ft_isin(s1[i], buf))
 		{
 			buf[j] = s1[i];
+			j++;
+		}
+		i++;
+	}
+	i = 0;
+	while (s2[i])
+	{
+		if (!ft_isin(s2[i], buf))
+		{
+			buf[j] = s2[i];
 			j++;
 		}
 		i++;
